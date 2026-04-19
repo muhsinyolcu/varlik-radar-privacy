@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Varlık Radar – Gizlilik Politikası</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f8fafc;
+      margin-bottom: 8px;
+    }
+    header p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+    .badge {
+      display: inline-block;
+      background: #10b981;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-top: 12px;
+      letter-spacing: 0.5px;
+    }
+    section {
+      margin-bottom: 36px;
+    }
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #38bdf8;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #1e3a5f;
+    }
+    p { color: #cbd5e1; margin-bottom: 10px; }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      padding: 6px 0 6px 20px;
+      color: #cbd5e1;
+      position: relative;
+    }
+    ul li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #38bdf8;
+    }
+    .highlight-box {
+      background: #1e3a5f;
+      border-left: 4px solid #10b981;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+    }
+    .highlight-box p {
+      margin: 0;
+      color: #a7f3d0;
+      font-weight: 500;
+    }
+    .lang-divider {
+      border: none;
+      border-top: 2px solid #1e293b;
+      margin: 56px 0;
+    }
+    footer {
+      text-align: center;
+      color: #475569;
+      font-size: 0.85rem;
+      margin-top: 48px;
+    }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- TURKISH -->
+  <header>
+    <h1>Varlık Radar</h1>
+    <p>Gizlilik Politikası / Privacy Policy</p>
+    <span class="badge">Veri Toplamıyoruz</span>
+  </header>
+
+  <section>
+    <h2>1. Genel Bakış</h2>
+    <div class="highlight-box">
+      <p>Varlık Radar, kullanıcılardan hiçbir kişisel veri toplamamakta, işlememekte veya üçüncü taraflarla paylaşmamaktadır.</p>
+    </div>
+    <p>Bu gizlilik politikası, <strong>Muhsin Yolcu</strong> tarafından geliştirilen <strong>Varlık Radar</strong> mobil uygulamasının veri uygulamalarını açıklamaktadır. Uygulama, iOS platformunda sunulmaktadır.</p>
+    <p><strong>Son güncelleme:</strong> Nisan 2025</p>
+  </section>
+
+  <section>
+    <h2>2. Toplanan Veriler</h2>
+    <p>Varlık Radar <strong>hiçbir kişisel veri toplamamaktadır</strong>. Uygulamaya girdiğiniz tüm finansal bilgiler (varlık miktarları, bütçe kalemleri, harcamalar) yalnızca <strong>cihazınızda yerel olarak</strong> saklanır ve hiçbir sunucuya ya da üçüncü tarafa iletilmez.</p>
+    <ul>
+      <li>Ad, soyad, e-posta veya telefon numarası toplanmaz</li>
+      <li>Konum bilgisi toplanmaz</li>
+      <li>Kullanıcı hesabı oluşturulmaz veya giriş bilgisi istenmez</li>
+      <li>Cihaz tanımlayıcısı veya reklam kimliği toplanmaz</li>
+      <li>Finansal verileriniz cihaz dışına çıkmaz</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. Yerel Depolama</h2>
+    <p>Uygulama verilerini cihazınızın yerel depolama alanında (AsyncStorage) saklar. Bu veriler:</p>
+    <ul>
+      <li>Yalnızca sizin cihazınızda bulunur</li>
+      <li>Uygulamayı sildiğinizde otomatik olarak silinir</li>
+      <li>Bulut yedeklemesi yapılmaz (uygulama tarafından)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. Harici API Kullanımı</h2>
+    <p>Uygulama, güncel piyasa verilerini almak için bazı halka açık finansal API servislerine bağlanır. Bu bağlantılarda kullanıcıya ait hiçbir veri iletilmez:</p>
+    <ul>
+      <li>Altın fiyatları için <strong>truncgil.com</strong> ve <strong>goldprice.org</strong></li>
+      <li>Döviz kurları için kamuya açık kur API'leri</li>
+      <li>Yatırım tavsiyesi (Analiz sekmesi) için büyük dil modeli servisleri</li>
+    </ul>
+    <p>Bu API çağrılarında yalnızca fiyat/kur verisi talep edilir; kullanıcı bilgisi hiçbir şekilde paylaşılmaz.</p>
+  </section>
+
+  <section>
+    <h2>5. Belge Erişimi</h2>
+    <p>Uygulama, banka ekstresi PDF dosyalarını analiz edebilmek için cihazınızdaki belgelerinize erişim izni isteyebilir. Bu iznin kullanımı:</p>
+    <ul>
+      <li>Yalnızca kullanıcının açıkça seçtiği dosyalara erişilir</li>
+      <li>Seçilen dosyalar üçüncü taraflara iletilmez</li>
+      <li>İzin, uygulamanın temel işlevselliği için zorunlu değildir</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. İzleme ve Analitik</h2>
+    <p>Varlık Radar, herhangi bir izleme, analitik veya reklam SDK'sı kullanmamaktadır. Kullanıcı davranışı takip edilmez.</p>
+  </section>
+
+  <section>
+    <h2>7. Çocukların Gizliliği</h2>
+    <p>Uygulama, 13 yaşın altındaki bireylerden bilerek veri toplamamaktadır. Veri toplanmadığından bu konu uygulanamaz niteliktedir.</p>
+  </section>
+
+  <section>
+    <h2>8. Politika Değişiklikleri</h2>
+    <p>Bu gizlilik politikasında değişiklik yapılması durumunda bu sayfa güncellenecektir. Değişiklikler, bu sayfada yayımlandıktan sonra geçerli olur.</p>
+  </section>
+
+  <section>
+    <h2>9. İletişim</h2>
+    <p>Gizlilik politikasına ilişkin sorularınız için:</p>
+    <ul>
+      <li>E-posta: <a href="mailto:mmuhsinyolcu@gmail.com">mmuhsinyolcu@gmail.com</a></li>
+      <li>Geliştirici: Muhsin Yolcu</li>
+    </ul>
+  </section>
+
+  <hr class="lang-divider" />
+
+  <!-- ENGLISH -->
+  <header>
+    <h1>Varlık Radar</h1>
+    <p>Privacy Policy (English)</p>
+  </header>
+
+  <section>
+    <h2>1. Overview</h2>
+    <div class="highlight-box">
+      <p>Varlık Radar does not collect, process, or share any personal data from its users.</p>
+    </div>
+    <p>This Privacy Policy describes the data practices of the <strong>Varlık Radar</strong> mobile application, developed by <strong>Muhsin Yolcu</strong>. The app is available on iOS.</p>
+    <p><strong>Last updated:</strong> April 2025</p>
+  </section>
+
+  <section>
+    <h2>2. Data Collection</h2>
+    <p>Varlık Radar <strong>does not collect any personal data</strong>. All financial information you enter (asset amounts, budget items, expenses) is stored <strong>locally on your device only</strong> and is never transmitted to any server or third party.</p>
+    <ul>
+      <li>No name, email, or phone number is collected</li>
+      <li>No location data is collected</li>
+      <li>No user account is created or login required</li>
+      <li>No device identifiers or advertising IDs are collected</li>
+      <li>Your financial data never leaves your device</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. Local Storage</h2>
+    <p>The app stores data in your device's local storage (AsyncStorage). This data:</p>
+    <ul>
+      <li>Exists only on your device</li>
+      <li>Is automatically deleted when you uninstall the app</li>
+      <li>Is not backed up to any cloud service by the app</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. External API Usage</h2>
+    <p>The app connects to public financial APIs to retrieve market data. No user data is transmitted in these connections:</p>
+    <ul>
+      <li>Gold prices from <strong>truncgil.com</strong> and <strong>goldprice.org</strong></li>
+      <li>Exchange rates from public currency APIs</li>
+      <li>Investment analysis (Analysis tab) via large language model services</li>
+    </ul>
+    <p>Only price/rate data is requested; no user information is shared in any of these calls.</p>
+  </section>
+
+  <section>
+    <h2>5. Document Access</h2>
+    <p>The app may request access to your device's documents to analyze bank statement PDF files. This permission:</p>
+    <ul>
+      <li>Only accesses files explicitly selected by the user</li>
+      <li>Does not transmit selected files to third parties</li>
+      <li>Is not required for the app's core functionality</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Tracking and Analytics</h2>
+    <p>Varlık Radar does not use any tracking, analytics, or advertising SDKs. User behavior is not monitored.</p>
+  </section>
+
+  <section>
+    <h2>7. Children's Privacy</h2>
+    <p>The app does not knowingly collect data from individuals under 13. Since no data is collected, this is not applicable.</p>
+  </section>
+
+  <section>
+    <h2>8. Policy Changes</h2>
+    <p>If this privacy policy changes, this page will be updated. Changes take effect upon publication.</p>
+  </section>
+
+  <section>
+    <h2>9. Contact</h2>
+    <ul>
+      <li>Email: <a href="mailto:mmuhsinyolcu@gmail.com">mmuhsinyolcu@gmail.com</a></li>
+      <li>Developer: Muhsin Yolcu</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Muhsin Yolcu · Varlık Radar · <a href="mailto:mmuhsinyolcu@gmail.com">mmuhsinyolcu@gmail.com</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
