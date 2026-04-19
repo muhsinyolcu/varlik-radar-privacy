@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Varlık Radar – Gizlilik Politikası</title>
+  <title>Varlık Radar – Gizlilik Politikası / Privacy Policy</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -17,17 +17,48 @@
       margin: 0 auto;
       padding: 48px 24px 80px;
     }
+
+    /* --- LANG SWITCHER --- */
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      border-radius: 999px;
+      border: 2px solid #1e3a5f;
+      background: transparent;
+      color: #94a3b8;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn .flag { font-size: 1.1rem; }
+    .lang-btn:hover { border-color: #38bdf8; color: #e2e8f0; }
+    .lang-btn.active {
+      background: #1e3a5f;
+      border-color: #38bdf8;
+      color: #f8fafc;
+    }
+
+    /* --- HEADER --- */
     header {
       text-align: center;
-      margin-bottom: 48px;
+      margin-bottom: 40px;
     }
     header h1 {
       font-size: 2rem;
       font-weight: 700;
       color: #f8fafc;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
-    header p {
+    header .subtitle {
       color: #94a3b8;
       font-size: 0.95rem;
     }
@@ -39,27 +70,27 @@
       font-weight: 600;
       padding: 3px 10px;
       border-radius: 999px;
-      margin-top: 12px;
+      margin-top: 10px;
       letter-spacing: 0.5px;
     }
-    section {
-      margin-bottom: 36px;
-    }
+
+    /* --- CONTENT --- */
+    .content { display: none; }
+    .content.active { display: block; }
+
+    section { margin-bottom: 36px; }
     h2 {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 600;
       color: #38bdf8;
       margin-bottom: 10px;
       padding-bottom: 6px;
-      border-bottom: 1px solid #1e3a5f;
+      border-bottom: 1px solid #1e293b;
     }
     p { color: #cbd5e1; margin-bottom: 10px; }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+    ul { list-style: none; padding: 0; }
     ul li {
-      padding: 6px 0 6px 20px;
+      padding: 5px 0 5px 20px;
       color: #cbd5e1;
       position: relative;
     }
@@ -73,24 +104,18 @@
       background: #1e3a5f;
       border-left: 4px solid #10b981;
       border-radius: 8px;
-      padding: 16px 20px;
-      margin-bottom: 16px;
+      padding: 14px 18px;
+      margin-bottom: 14px;
     }
-    .highlight-box p {
-      margin: 0;
-      color: #a7f3d0;
-      font-weight: 500;
-    }
-    .lang-divider {
-      border: none;
-      border-top: 2px solid #1e293b;
-      margin: 56px 0;
-    }
+    .highlight-box p { margin: 0; color: #a7f3d0; font-weight: 500; }
+
     footer {
       text-align: center;
       color: #475569;
       font-size: 0.85rem;
       margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #1e293b;
     }
     a { color: #38bdf8; text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -99,176 +124,210 @@
 <body>
 <div class="container">
 
-  <!-- TURKISH -->
   <header>
     <h1>Varlık Radar</h1>
-    <p>Gizlilik Politikası / Privacy Policy</p>
-    <span class="badge">Veri Toplamıyoruz</span>
+    <p class="subtitle" id="header-subtitle">Gizlilik Politikası</p>
+    <span class="badge" id="header-badge">Veri Toplamıyoruz</span>
   </header>
 
-  <section>
-    <h2>1. Genel Bakış</h2>
-    <div class="highlight-box">
-      <p>Varlık Radar, kullanıcılardan hiçbir kişisel veri toplamamakta, işlememekte veya üçüncü taraflarla paylaşmamaktadır.</p>
-    </div>
-    <p>Bu gizlilik politikası, <strong>Muhsin Yolcu</strong> tarafından geliştirilen <strong>Varlık Radar</strong> mobil uygulamasının veri uygulamalarını açıklamaktadır. Uygulama, iOS platformunda sunulmaktadır.</p>
-    <p><strong>Son güncelleme:</strong> Nisan 2025</p>
-  </section>
+  <!-- LANG SWITCHER -->
+  <div class="lang-switcher">
+    <button class="lang-btn active" id="btn-tr" onclick="setLang('tr')">
+      <span class="flag">🇹🇷</span> Türkçe
+    </button>
+    <button class="lang-btn" id="btn-en" onclick="setLang('en')">
+      <span class="flag">🇬🇧</span> English
+    </button>
+  </div>
 
-  <section>
-    <h2>2. Toplanan Veriler</h2>
-    <p>Varlık Radar <strong>hiçbir kişisel veri toplamamaktadır</strong>. Uygulamaya girdiğiniz tüm finansal bilgiler (varlık miktarları, bütçe kalemleri, harcamalar) yalnızca <strong>cihazınızda yerel olarak</strong> saklanır ve hiçbir sunucuya ya da üçüncü tarafa iletilmez.</p>
-    <ul>
-      <li>Ad, soyad, e-posta veya telefon numarası toplanmaz</li>
-      <li>Konum bilgisi toplanmaz</li>
-      <li>Kullanıcı hesabı oluşturulmaz veya giriş bilgisi istenmez</li>
-      <li>Cihaz tanımlayıcısı veya reklam kimliği toplanmaz</li>
-      <li>Finansal verileriniz cihaz dışına çıkmaz</li>
-    </ul>
-  </section>
+  <!-- TURKISH CONTENT -->
+  <div class="content active" id="content-tr">
+    <section>
+      <h2>1. Genel Bakış</h2>
+      <div class="highlight-box">
+        <p>Varlık Radar, kullanıcılardan hiçbir kişisel veri toplamamakta, işlememekte veya üçüncü taraflarla paylaşmamaktadır.</p>
+      </div>
+      <p>Bu gizlilik politikası, <strong>Muhsin Yolcu</strong> tarafından geliştirilen <strong>Varlık Radar</strong> mobil uygulamasının veri uygulamalarını açıklamaktadır. Uygulama iOS platformunda sunulmaktadır.</p>
+      <p><strong>Son güncelleme:</strong> Nisan 2025</p>
+    </section>
 
-  <section>
-    <h2>3. Yerel Depolama</h2>
-    <p>Uygulama verilerini cihazınızın yerel depolama alanında (AsyncStorage) saklar. Bu veriler:</p>
-    <ul>
-      <li>Yalnızca sizin cihazınızda bulunur</li>
-      <li>Uygulamayı sildiğinizde otomatik olarak silinir</li>
-      <li>Bulut yedeklemesi yapılmaz (uygulama tarafından)</li>
-    </ul>
-  </section>
+    <section>
+      <h2>2. Toplanan Veriler</h2>
+      <p>Varlık Radar <strong>hiçbir kişisel veri toplamamaktadır</strong>. Uygulamaya girdiğiniz tüm finansal bilgiler (varlık miktarları, bütçe kalemleri, harcamalar) yalnızca <strong>cihazınızda yerel olarak</strong> saklanır ve hiçbir sunucuya ya da üçüncü tarafa iletilmez.</p>
+      <ul>
+        <li>Ad, soyad, e-posta veya telefon numarası toplanmaz</li>
+        <li>Konum bilgisi toplanmaz</li>
+        <li>Kullanıcı hesabı oluşturulmaz veya giriş bilgisi istenmez</li>
+        <li>Cihaz tanımlayıcısı veya reklam kimliği toplanmaz</li>
+        <li>Finansal verileriniz cihaz dışına çıkmaz</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>4. Harici API Kullanımı</h2>
-    <p>Uygulama, güncel piyasa verilerini almak için bazı halka açık finansal API servislerine bağlanır. Bu bağlantılarda kullanıcıya ait hiçbir veri iletilmez:</p>
-    <ul>
-      <li>Altın fiyatları için <strong>truncgil.com</strong> ve <strong>goldprice.org</strong></li>
-      <li>Döviz kurları için kamuya açık kur API'leri</li>
-      <li>Yatırım tavsiyesi (Analiz sekmesi) için büyük dil modeli servisleri</li>
-    </ul>
-    <p>Bu API çağrılarında yalnızca fiyat/kur verisi talep edilir; kullanıcı bilgisi hiçbir şekilde paylaşılmaz.</p>
-  </section>
+    <section>
+      <h2>3. Yerel Depolama</h2>
+      <p>Uygulama verilerini cihazınızın yerel depolama alanında (AsyncStorage) saklar. Bu veriler:</p>
+      <ul>
+        <li>Yalnızca sizin cihazınızda bulunur</li>
+        <li>Uygulamayı sildiğinizde otomatik olarak silinir</li>
+        <li>Uygulama tarafından buluta yedeklenmez</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>5. Belge Erişimi</h2>
-    <p>Uygulama, banka ekstresi PDF dosyalarını analiz edebilmek için cihazınızdaki belgelerinize erişim izni isteyebilir. Bu iznin kullanımı:</p>
-    <ul>
-      <li>Yalnızca kullanıcının açıkça seçtiği dosyalara erişilir</li>
-      <li>Seçilen dosyalar üçüncü taraflara iletilmez</li>
-      <li>İzin, uygulamanın temel işlevselliği için zorunlu değildir</li>
-    </ul>
-  </section>
+    <section>
+      <h2>4. Harici API Kullanımı</h2>
+      <p>Uygulama, güncel piyasa verilerini almak için halka açık finansal API servislerine bağlanır. Bu bağlantılarda kullanıcıya ait hiçbir veri iletilmez:</p>
+      <ul>
+        <li>Altın fiyatları için <strong>truncgil.com</strong> ve <strong>goldprice.org</strong></li>
+        <li>Döviz kurları için kamuya açık kur API'leri</li>
+        <li>Yatırım tavsiyesi (Analiz sekmesi) için büyük dil modeli servisleri</li>
+      </ul>
+      <p>Bu çağrılarda yalnızca fiyat/kur verisi talep edilir; kullanıcı bilgisi hiçbir şekilde paylaşılmaz.</p>
+    </section>
 
-  <section>
-    <h2>6. İzleme ve Analitik</h2>
-    <p>Varlık Radar, herhangi bir izleme, analitik veya reklam SDK'sı kullanmamaktadır. Kullanıcı davranışı takip edilmez.</p>
-  </section>
+    <section>
+      <h2>5. Belge Erişimi</h2>
+      <p>Uygulama, banka ekstresi PDF dosyalarını analiz edebilmek için belge erişim izni isteyebilir:</p>
+      <ul>
+        <li>Yalnızca kullanıcının açıkça seçtiği dosyalara erişilir</li>
+        <li>Seçilen dosyalar üçüncü taraflara iletilmez</li>
+        <li>Bu izin, uygulamanın temel işlevselliği için zorunlu değildir</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>7. Çocukların Gizliliği</h2>
-    <p>Uygulama, 13 yaşın altındaki bireylerden bilerek veri toplamamaktadır. Veri toplanmadığından bu konu uygulanamaz niteliktedir.</p>
-  </section>
+    <section>
+      <h2>6. İzleme ve Analitik</h2>
+      <p>Varlık Radar, herhangi bir izleme, analitik veya reklam SDK'sı kullanmamaktadır. Kullanıcı davranışı takip edilmez.</p>
+    </section>
 
-  <section>
-    <h2>8. Politika Değişiklikleri</h2>
-    <p>Bu gizlilik politikasında değişiklik yapılması durumunda bu sayfa güncellenecektir. Değişiklikler, bu sayfada yayımlandıktan sonra geçerli olur.</p>
-  </section>
+    <section>
+      <h2>7. Çocukların Gizliliği</h2>
+      <p>Uygulama, 13 yaşın altındaki bireylerden bilerek veri toplamamaktadır. Veri toplanmadığından bu madde fiilen uygulanamaz niteliktedir.</p>
+    </section>
 
-  <section>
-    <h2>9. İletişim</h2>
-    <p>Gizlilik politikasına ilişkin sorularınız için:</p>
-    <ul>
-      <li>E-posta: <a href="mailto:mmuhsinyolcu@gmail.com">mmuhsinyolcu@gmail.com</a></li>
-      <li>Geliştirici: Muhsin Yolcu</li>
-    </ul>
-  </section>
+    <section>
+      <h2>8. Politika Değişiklikleri</h2>
+      <p>Bu gizlilik politikasında değişiklik yapılması durumunda bu sayfa güncellenecektir. Değişiklikler yayımlandıktan sonra geçerli olur.</p>
+    </section>
 
-  <hr class="lang-divider" />
+    <section>
+      <h2>9. İletişim</h2>
+      <p>Sorularınız için:</p>
+      <ul>
+        <li>E-posta: <a href="mailto:mmuhsinyolcu@gmail.com">mmuhsinyolcu@gmail.com</a></li>
+        <li>Geliştirici: Muhsin Yolcu</li>
+      </ul>
+    </section>
+  </div>
 
-  <!-- ENGLISH -->
-  <header>
-    <h1>Varlık Radar</h1>
-    <p>Privacy Policy (English)</p>
-  </header>
+  <!-- ENGLISH CONTENT -->
+  <div class="content" id="content-en">
+    <section>
+      <h2>1. Overview</h2>
+      <div class="highlight-box">
+        <p>Varlık Radar does not collect, process, or share any personal data from its users.</p>
+      </div>
+      <p>This Privacy Policy describes the data practices of the <strong>Varlık Radar</strong> mobile application, developed by <strong>Muhsin Yolcu</strong>. The app is available on iOS.</p>
+      <p><strong>Last updated:</strong> April 2025</p>
+    </section>
 
-  <section>
-    <h2>1. Overview</h2>
-    <div class="highlight-box">
-      <p>Varlık Radar does not collect, process, or share any personal data from its users.</p>
-    </div>
-    <p>This Privacy Policy describes the data practices of the <strong>Varlık Radar</strong> mobile application, developed by <strong>Muhsin Yolcu</strong>. The app is available on iOS.</p>
-    <p><strong>Last updated:</strong> April 2025</p>
-  </section>
+    <section>
+      <h2>2. Data Collection</h2>
+      <p>Varlık Radar <strong>does not collect any personal data</strong>. All financial information you enter (asset amounts, budget items, expenses) is stored <strong>locally on your device only</strong> and is never transmitted to any server or third party.</p>
+      <ul>
+        <li>No name, email, or phone number is collected</li>
+        <li>No location data is collected</li>
+        <li>No user account is created or login required</li>
+        <li>No device identifiers or advertising IDs are collected</li>
+        <li>Your financial data never leaves your device</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>2. Data Collection</h2>
-    <p>Varlık Radar <strong>does not collect any personal data</strong>. All financial information you enter (asset amounts, budget items, expenses) is stored <strong>locally on your device only</strong> and is never transmitted to any server or third party.</p>
-    <ul>
-      <li>No name, email, or phone number is collected</li>
-      <li>No location data is collected</li>
-      <li>No user account is created or login required</li>
-      <li>No device identifiers or advertising IDs are collected</li>
-      <li>Your financial data never leaves your device</li>
-    </ul>
-  </section>
+    <section>
+      <h2>3. Local Storage</h2>
+      <p>The app stores data in your device's local storage (AsyncStorage). This data:</p>
+      <ul>
+        <li>Exists only on your device</li>
+        <li>Is automatically deleted when you uninstall the app</li>
+        <li>Is not backed up to any cloud service by the app</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>3. Local Storage</h2>
-    <p>The app stores data in your device's local storage (AsyncStorage). This data:</p>
-    <ul>
-      <li>Exists only on your device</li>
-      <li>Is automatically deleted when you uninstall the app</li>
-      <li>Is not backed up to any cloud service by the app</li>
-    </ul>
-  </section>
+    <section>
+      <h2>4. External API Usage</h2>
+      <p>The app connects to public financial APIs to retrieve market data. No user data is transmitted in these connections:</p>
+      <ul>
+        <li>Gold prices from <strong>truncgil.com</strong> and <strong>goldprice.org</strong></li>
+        <li>Exchange rates from public currency APIs</li>
+        <li>Investment analysis (Analysis tab) via large language model services</li>
+      </ul>
+      <p>Only price/rate data is requested; no user information is shared in any of these calls.</p>
+    </section>
 
-  <section>
-    <h2>4. External API Usage</h2>
-    <p>The app connects to public financial APIs to retrieve market data. No user data is transmitted in these connections:</p>
-    <ul>
-      <li>Gold prices from <strong>truncgil.com</strong> and <strong>goldprice.org</strong></li>
-      <li>Exchange rates from public currency APIs</li>
-      <li>Investment analysis (Analysis tab) via large language model services</li>
-    </ul>
-    <p>Only price/rate data is requested; no user information is shared in any of these calls.</p>
-  </section>
+    <section>
+      <h2>5. Document Access</h2>
+      <p>The app may request access to your device's documents to analyze bank statement PDF files:</p>
+      <ul>
+        <li>Only accesses files explicitly selected by the user</li>
+        <li>Does not transmit selected files to third parties</li>
+        <li>This permission is not required for the app's core functionality</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>5. Document Access</h2>
-    <p>The app may request access to your device's documents to analyze bank statement PDF files. This permission:</p>
-    <ul>
-      <li>Only accesses files explicitly selected by the user</li>
-      <li>Does not transmit selected files to third parties</li>
-      <li>Is not required for the app's core functionality</li>
-    </ul>
-  </section>
+    <section>
+      <h2>6. Tracking and Analytics</h2>
+      <p>Varlık Radar does not use any tracking, analytics, or advertising SDKs. User behavior is not monitored.</p>
+    </section>
 
-  <section>
-    <h2>6. Tracking and Analytics</h2>
-    <p>Varlık Radar does not use any tracking, analytics, or advertising SDKs. User behavior is not monitored.</p>
-  </section>
+    <section>
+      <h2>7. Children's Privacy</h2>
+      <p>The app does not knowingly collect data from individuals under 13. Since no data is collected, this provision is not applicable in practice.</p>
+    </section>
 
-  <section>
-    <h2>7. Children's Privacy</h2>
-    <p>The app does not knowingly collect data from individuals under 13. Since no data is collected, this is not applicable.</p>
-  </section>
+    <section>
+      <h2>8. Policy Changes</h2>
+      <p>If this privacy policy changes, this page will be updated. Changes take effect upon publication.</p>
+    </section>
 
-  <section>
-    <h2>8. Policy Changes</h2>
-    <p>If this privacy policy changes, this page will be updated. Changes take effect upon publication.</p>
-  </section>
-
-  <section>
-    <h2>9. Contact</h2>
-    <ul>
-      <li>Email: <a href="mailto:mmuhsinyolcu@gmail.com">mmuhsinyolcu@gmail.com</a></li>
-      <li>Developer: Muhsin Yolcu</li>
-    </ul>
-  </section>
+    <section>
+      <h2>9. Contact</h2>
+      <p>For any questions:</p>
+      <ul>
+        <li>Email: <a href="mailto:mmuhsinyolcu@gmail.com">mmuhsinyolcu@gmail.com</a></li>
+        <li>Developer: Muhsin Yolcu</li>
+      </ul>
+    </section>
+  </div>
 
   <footer>
     <p>© 2025 Muhsin Yolcu · Varlık Radar · <a href="mailto:mmuhsinyolcu@gmail.com">mmuhsinyolcu@gmail.com</a></p>
   </footer>
 
 </div>
+
+<script>
+  var labels = {
+    tr: { subtitle: 'Gizlilik Politikası', badge: 'Veri Toplamıyoruz' },
+    en: { subtitle: 'Privacy Policy',      badge: 'No Data Collected'  }
+  };
+
+  function setLang(lang) {
+    document.getElementById('content-tr').classList.toggle('active', lang === 'tr');
+    document.getElementById('content-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('header-subtitle').textContent = labels[lang].subtitle;
+    document.getElementById('header-badge').textContent   = labels[lang].badge;
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('pp-lang', lang); } catch(e) {}
+  }
+
+  (function() {
+    var saved = '';
+    try { saved = localStorage.getItem('pp-lang'); } catch(e) {}
+    var browserLang = (navigator.language || '').toLowerCase();
+    var lang = saved || (browserLang.startsWith('tr') ? 'tr' : 'en');
+    if (lang !== 'tr') setLang(lang);
+  })();
+</script>
 </body>
 </html>
